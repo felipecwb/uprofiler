@@ -73,6 +73,10 @@ echo "</head>";
 
 echo "<body>";
 
+if (isset($_GET['run'])) {
+    echo "<div><b><a href=\"/\">Home - All Reports</a></b></div>";
+}
+
 $vbar  = ' class="vbar"';
 $vwbar = ' class="vwbar"';
 $vwlbar = ' class="vwlbar"';
