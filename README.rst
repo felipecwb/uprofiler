@@ -526,6 +526,31 @@ in the 3 files.
 You'll also need to "include" the file that implements your class in the above
 files.
 
+**c) Using the default inclusion file**
+
+Just add a auto prepend file to the PHP.
+
+PHP Code:
+.. code-block:: php
+
+    <?php
+    require "<uprofiler-path>/inc/prepend.default.php";
+    // ...your code...
+    ?>
+
+Nginx:
+.. code-block:: conf
+
+    fastcgi_param PHP_VALUE "auto_prepend_file=<uprofiler-path>/inc/prepend.default.php";
+
+Apache:
+.. code-block:: conf
+
+    php_admin_value auto_prepend_file "<uprofiler-path>/inc/prepend.default.php"
+
+
+You can change the default prepend file.
+
 Accessing runs from UI
 ~~~~~~~~~~~~~~~~~~~~~~
 
