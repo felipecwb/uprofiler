@@ -531,6 +531,7 @@ files.
 Just add a auto prepend file to the PHP.
 
 PHP Code:
+
 .. code-block:: php
 
     <?php
@@ -539,14 +540,12 @@ PHP Code:
     ?>
 
 Nginx:
-.. code-block:: conf
 
-    fastcgi_param PHP_VALUE "auto_prepend_file=<uprofiler-path>/inc/prepend.default.php";
+    ``fastcgi_param PHP_VALUE "auto_prepend_file=<uprofiler-path>/inc/prepend.default.php";``
 
 Apache:
-.. code-block:: conf
 
-    php_admin_value auto_prepend_file "<uprofiler-path>/inc/prepend.default.php"
+    ``php_admin_value auto_prepend_file "<uprofiler-path>/inc/prepend.default.php"``
 
 
 You can change the default prepend file.
